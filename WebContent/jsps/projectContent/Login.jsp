@@ -10,14 +10,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>LoginPage</title>
 <!-- <link rel="stylesheet" type="text/css" href="WEB-INF/lib/jquery-2.1.1.min.js" /> -->
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
 $(document).ready(function(){
 	
-	$("#login_details").css("padding","200px 200px 200px");
+	$("#login_details").css({"margin":"150px 0 0 450px"});
 	
 });
 </script>
+<!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
 </head>
 <body>
 
