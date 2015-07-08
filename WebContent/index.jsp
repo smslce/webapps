@@ -8,10 +8,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>IndexPage</title>
+<style type="text/css">
+	p:before{
+		content:'\0000';
+	}
+</style>
 </head>
 <body>
 <br>
-<h1>Orgainzation Info</h1>h1>
+<h1>Orgainzation Info</h1>
+<p>blockquotes</p>
 <br>
 </body>
 </html>

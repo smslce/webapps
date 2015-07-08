@@ -21,6 +21,16 @@ max-height:10%;
 
 </style>
 
+<script language="javascript">
+	var path = window.location.href;
+	function redirect(){
+		<%-- <%
+			pageContext.include("jsps/projectContent");
+		%> --%>
+		/* window.locatio.replace(path); */
+	}
+</script>
+
 </head>
 <body>
 
@@ -28,19 +38,21 @@ max-height:10%;
 		<div id="logoSpace"></div>
 		<div id="userinfo">
 		<% if(request.getParameter("user")==null){ %>
+		<form action="jsps/projectContent/Login.jsp" method="GET">
 		<table>
 			<tr>
-				<td><input type="text" placeholder="Enter your name here..."/> </td>
+				<td><input nam="username" type="text" placeholder="Enter your name here..."/> </td>
 			</tr>
 			<tr>
 			<td>
-				<input type="password" placeholder="Enter your password here..."/>
+				<input name="password" type="password" placeholder="Enter your password here..."/>
 			</td>
 			</tr>
 			<tr>
-			<td><input name="login" type="submit" value="Login" onclick=""></td>
+			<td><input name="login" type="submit" value="Login" onclick="redirect();"></td>
 			</tr>
 		</table>
+		</form>
 		<%}else{%>
 			<a href="/profile.do">profile</a>&nbsp;
 			<a href="/logout.do">logout</a>

@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID" version="3.0"
- xmlns="http://java.sun.com/xml/ns/javaee"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
- <display-name>webapps</display-name>
- <welcome-file-list>
-  <welcome-file>index.html</welcome-file>
-  <welcome-file>index.htm</welcome-file>
-  <welcome-file>index.jsp</welcome-file>
-  <welcome-file>default.html</welcome-file>
-  <welcome-file>default.htm</welcome-file>
-  <welcome-file>default.jsp</welcome-file>
-<!--   <welcome-file>Login.jsp</welcome-file> -->
- </welcome-file-list>
- 
- <servlet>
- 	<servlet-name>action</servlet-name>
- 	<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
- 	<init-param>
- 		<param-name>config</param-name>
- 		<param-value>/WEB-INF/struts-config.xml</param-value>
- 	</init-param>
- 	<init-param>
- 		<param-name>debug</param-name>
- 		<param-value>3</param-value>
- 		<!-- above number is the numerical translation of struts debug level info usually taken as string enum values. -->
- 	</init-param>
- 	<init-param>
- 		<param-name>detail</param-name>
- 		<param-value>3</param-value>
- 	</init-param>
- 	<load-on-startup>0</load-on-startup>
- </servlet>
- 
- <servlet-mapping>
- 	<servlet-name>action</servlet-name>
- 	<url-pattern>*.do</url-pattern>
- </servlet-mapping>
- 
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>webapps</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>redirection</servlet-name>
+  	<servlet-class>org.smslce.redirection.Redirection</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>redirection</servlet-name>
+  	<url-pattern>*.jsp</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
